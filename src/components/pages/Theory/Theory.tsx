@@ -1,9 +1,10 @@
 import React from 'react'
+import Menu from '../../Menu/Nav/Menu'
 
 const Theory = () => {
   return (
     <div>
-   Teoria
+   <Menu />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './index.css';
+import styles from './App.module.css'
 import Grammar from './components/pages/Grammar/Grammar';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/pages/Home/Home';
@@ -10,7 +10,8 @@ import Footer from './components/pages/Footer/Footer';
 const App = () => {
 	return (
 		<>
-			<div className='App'>
+			
+			
 				<Router>
 					<Routes>
 						<Route path='/' element={<Home />} />
@@ -21,7 +22,7 @@ const App = () => {
 						<Route path='*' element={<h1>Page not found</h1>} />
 					</Routes>
 				</Router>
-			</div>
+			
 		</>
 	);
 };

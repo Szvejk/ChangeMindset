@@ -3,15 +3,27 @@
 	position: cover;
 }
 .containerStyles {
-	width: 1200px;
-	height: 600px;
+	width: 100%;
+
 	margin: 0 auto;
-	margin-top: 5%;
-    
+	margin-top: 2%;
+	display: flex;
+	justify-items: center;
+	flex-direction: column;
+	align-items: center;
 }
-.titleSociety{
-   margin-bottom: 5%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+.titleSociety {
+	margin: 3%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+.descriptionHeader {
+	font-size: 20px;
+	line-height: 30px;
+	width: 80%;
+	height: 30%;
+	display: flex;
+	justify-items: center;
+	align-items: center;
 }

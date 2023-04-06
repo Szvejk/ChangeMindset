@@ -15,11 +15,17 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 5px;
+
 }
 .logoWrapper {
 	display: flex;
 	margin-left: 2%;
 }
+
+.navbar{
+min-width: 100%
+}
+
 .title {
 	font-size: 25px;
 	text-transform: uppercase;

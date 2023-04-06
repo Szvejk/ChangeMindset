@@ -1,11 +1,14 @@
 import React from 'react'
+import Menu from '../../Menu/Nav/Menu'
+
 
 const Grammar = () => {
   return (
     <div>
-      Grammar
+      <Menu />
     </div>
   )
 }
 
 export default Grammar
+

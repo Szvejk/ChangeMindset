@@ -1,0 +1,17 @@
+.photoImg {
+	width: 100%;
+	position: cover;
+}
+.containerStyles {
+	width: 1200px;
+	height: 600px;
+	margin: 0 auto;
+	margin-top: 5%;
+    
+}
+.titleSociety{
+   margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

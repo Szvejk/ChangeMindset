@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Exam = () => {
+const Theory = () => {
   return (
     <div>
-      
+   Teoria
     </div>
   )
 }
 
-export default Exam
+export default Theory

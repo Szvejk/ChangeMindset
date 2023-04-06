@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Theory = () => {
+const Grammar = () => {
   return (
     <div>
-      
+      Grammar
     </div>
   )
 }
 
-export default Theory
+export default Grammar

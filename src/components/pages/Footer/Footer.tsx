@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Grammar = () => {
+const Footer = () => {
   return (
     <div>
-      
+      Kontakt
     </div>
   )
 }
 
-export default Grammar
+export default Footer

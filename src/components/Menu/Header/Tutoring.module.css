@@ -1,5 +1,27 @@
-.titleTutoring{
-    display: block;
-    width: 20%;
-    height: 20%;
+.titleTutoring {
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.titleSmall {
+	color: rgb(78, 11, 133);
+	font-size: 20px;
+}
+.wrapperCards {
+	width: 80%;
+	height: 20vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.card {
+	width: 35%;
+	background-color: red;
+	margin: 2%;
+}
+.flex {
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }

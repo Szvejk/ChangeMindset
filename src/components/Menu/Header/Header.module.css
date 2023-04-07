@@ -6,7 +6,7 @@
 	width: 100%;
 
 	margin: 0 auto;
-	margin-top: 2%;
+	margin-top: 3%;
 	display: flex;
 	justify-items: center;
 	flex-direction: column;
@@ -21,9 +21,11 @@
 .descriptionHeader {
 	font-size: 20px;
 	line-height: 30px;
-	width: 80%;
-	height: 30%;
+width:60%;
+	height: 300px;
 	display: flex;
 	justify-items: center;
 	align-items: center;
+	background-color:  rgb(133, 191, 238);
+	padding: 2%
 }

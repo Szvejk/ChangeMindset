@@ -1,0 +1,29 @@
+.zad1,
+.zad2,
+.zad3,
+.zad4 {
+	width: 98vw;
+	height: 15vh;
+	background-color: rgb(216, 216, 216);
+	margin: 15px;
+	font-size: 20px;
+	padding: 10px;
+}
+.titleExercise {
+	font-size: 20px;
+}
+.checkAnswers1,
+.checkAnswers2,
+.checkAnswers3,
+.checkAnswers4 {
+	height: 40px;
+	width: 150px;
+	margin-left: 15px;
+	transition: all 0.3s ease;
+}
+.checkAnswers1:hover,
+.checkAnswers2:hover,
+.checkAnswers3:hover,
+.checkAnswers4:hover {
+	background-color: #9faec5;
+}

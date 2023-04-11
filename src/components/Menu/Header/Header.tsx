@@ -27,21 +27,22 @@ const Header = () => {
 	return (
 		<div className={styles.containerStyles}>
 			<div className={styles.descriptionHeader}>
-			<p className={styles.descript}> 	Strona Change Mindset.pl została stworzona z myślą o osobach, które chcą
-				uczyć się języka angielskiego za darmo i bez wychodzenia z domu.
-				Znajdziesz tutaj cenną wiedzę dotyczącą gramatyki angielskiej, poznasz
-				nowe zwroty i słówka, a także przećwiczysz swoją wiedzę, dzięki darmowym
-				ćwiczeniom. Wierzymy, że znajomość angielskiego przyczyni się do poprawy
-				jakości Twojego życia, a także umożliwi łatwą komunikację w innym kraju,
-				w pracy oraz podczas codziennych sytuacji. Zapraszamy!</p>
+				<h4 className={styles.titleHeader}>
+					Strona Change Mindset.pl została stworzona z myślą o osobach, które
+					chcą uczyć się języka angielskiego za darmo i bez wychodzenia z domu.
+				</h4>
+				<p className={styles.descript}>
+					Znajdziesz tutaj cenną wiedzę dotyczącą gramatyki angielskiej, poznasz
+					nowe zwroty i słówka, a także przećwiczysz swoją wiedzę, dzięki
+					darmowym ćwiczeniom.
+				</p>
 			</div>
 
 			<div className={styles.titleSociety}>
 				<h1>Nasza społeczność</h1>
 			</div>
-			
-				<ImageSlider slides={slides} />
-	
+
+			<ImageSlider slides={slides} />
 		</div>
 	);
 };

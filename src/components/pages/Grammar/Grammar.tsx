@@ -7,8 +7,13 @@ const Grammar = () => {
 		<>
 			<Menu />
 			<div className={styles.grammarWrapper}>
+				<div className={styles.bg}>
+					<div className={styles.dot}></div>
+					<div className={styles.dot}></div>
+				</div>
+	<div className={styles.wrapperLevels}>
 				<h1 className={styles.titleOfChoose}> Wybierz swój level </h1>
-				<div className={styles.wrapperLevels}>
+			
 					<Link to='/junior' className={styles.typeofLevel}>
 						A1-A2
 					</Link>
@@ -19,8 +24,8 @@ const Grammar = () => {
 						B2+
 					</Link>
 				</div>
+				<div className={styles.spacer}></div>
 			</div>
-		
 		</>
 	);
 };

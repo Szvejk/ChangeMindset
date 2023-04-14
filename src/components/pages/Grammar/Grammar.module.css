@@ -1,3 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap');
+
+:root {
+	--color-dark: #361999;
+	--color-light: #78fff1;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+.grammarWrapper{
+	background: var(--color-light);
+	background: linear-gradient(to top right,var(--color-dark), var(--color-light));
+ 
+	width: 100%;
+	font-family: Montserrat;	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	height: calc(100vh - 74px);;
+}
+
+.wrapperLevels {
+	width: 80%;
+	height: 200px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background:linear-gradient(to left, rgba(255,255,255, 0.05), rgba(255,255,255,0.35));
+	box-shadow: 0px 8px 24px 0 rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(8px);
+}
+
+.spacer{
+	height: 3px;
+	background-color: rgba(255, 255, 255, 0.55);
+border-radius: 100%;
+	width: 80%;
+	border-color: transparent;
+
+}
+
 .typeofLevel {
 	color: black;
 	font-weight: 600;
@@ -8,22 +58,47 @@
 }
 .titleOfChoose {
 	color: white;
-	margin-bottom: 3%;
+	
 }
-.grammarWrapper {
-	background-color: #547b92;
+
+.bg{
+	height: 100%;
 	width: 100%;
-	height: calc(100vh - 74px);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	position: absolute;
+
 }
-.wrapperLevels {
-	width: 80%;
-	height: 200px;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	background-color: #fff;
+.dot{
+	background: linear-gradient(to left,#98dfd6, rgba(129, 128, 128, 0.3));
+
+	border-radius: 50%;
+}
+.dot:nth-child(1){
+	height: 500px;
+	position: absolute;
+	left: 10%;
+	top: 0;
+	width:500px;
+animation: move1 10s linear infinite;
+}
+.dot:nth-child(2){
+	height: 300px;
+	position: absolute;
+	left: 80%;
+	top: 50%;
+	width:300px;
+	animation: move2 15s infinite linear;
+
+}
+@keyframes move1{
+	from {transform:translateY(-10vh)
+	} to {
+		transform: translateY(100vh);
+	}
+}
+
+@keyframes move2{
+	from {transform:translateY(40vh)
+	} to {
+		transform: translateY(-80vh);
+	}
 }

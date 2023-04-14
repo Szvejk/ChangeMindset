@@ -1,45 +1,49 @@
-import React from 'react'
-import styles from './Society.module.css'
-import {HiStar, HiHeart,HiUserGroup } from "react-icons/hi";
-import {CountAnimation} from '../../Count/CountAnimation'
+import React from 'react';
+import styles from './Society.module.css';
+import { HiStar, HiHeart, HiUserGroup } from 'react-icons/hi';
+import { CountAnimation } from '../../Count/CountAnimation';
 
-const boxes=[{
-  id: 1,
-  icon: <HiUserGroup/>,
-  endCount: 100,
-  text: "Nasi użytkownicy"
-},{
-  id: 2,
-  icon: <HiHeart /> ,
-  endCount: 200,
-  text: "Wkładamy w naszą pracę całe serce"
-},{
-  id: 3,
-  icon:  <HiStar />,
-  endCount: 300,
-  text: "Jesteśmy oceniani na 5 gwiazdek"
-}]
+const boxes = [
+	{
+		id: 1,
+		icon: <HiUserGroup />,
+		endCount: 180,
+		text: 'Nasi użytkownicy',
+	},
+	{
+		id: 2,
+		icon: <HiHeart />,
+		endCount: 220,
+		text: 'Wkładamy w naszą pracę całe serce',
+	},
+	{
+		id: 3,
+		icon: <HiStar />,
+		endCount: 350,
+		text: 'Jesteśmy oceniani na 5 gwiazdek',
+	},
+];
 
 const Society = () => {
+	let interval = 5000;
 
-let interval = 5000;
+	return (
+		<div className={styles.wrapper}>
+			{boxes.map((el) => {
+				return (
+					<div key={el.id}>
+						<div className={styles.container}>
+							<div className={styles.iconCounter}>{el.icon} </div>
+							<div className={styles.numbers}>
+								<CountAnimation duration={3000} endCount={el.endCount} />{' '}
+							</div>
+							<span className={styles.text}>{el.text}</span>
+						</div>
+					</div>
+				);
+			})}
 
-
-
-
-  return (
-      <div className={styles.wrapper}>
-        {boxes.map(el=>{
-          return <div key={el.id}>
-            <div className={styles.container}>
-        <div className={styles.iconCounter}>{el.icon} </div>
-         <CountAnimation duration={3000} endCount={el.endCount} /> 
-          <span className={styles.text}>{el.text}</span>
-        </div>
-          </div>
-        })}
-
-        {/* <div className={styles.container}>
+			{/* <div className={styles.container}>
         <div className={styles.iconCounter}><HiUserGroup/> </div>
          <CountAnimation duration={3000} endCount={400} /> 
           <span className={styles.text}>Nasi użytkownicy</span>
@@ -54,9 +58,8 @@ let interval = 5000;
        <CountAnimation duration={3000} endCount={100} /> 
           <span className={styles.text}>Jesteśmy oceniani na 5 gwiazdek</span>
         </div> */}
-      </div>
-   
-  )
-}
+		</div>
+	);
+};
 
-export default Society
+export default Society;

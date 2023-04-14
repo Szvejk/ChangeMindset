@@ -60,6 +60,18 @@ padding: 10px;
 
    
 }
+
+
+.numbers{
+	width: 100%;
+line-height: 30px;
+	display: flex;
+	justify-content: center;
+align-content: center;
+}
+
+
+
 @media screen and (max-width: 1024px) {
 	.wrapper {
 		width: 85vw;

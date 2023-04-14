@@ -1,0 +1,57 @@
+.zad1senior,
+.zad2senior,
+.zad3senior,
+.zad4senior,
+.zad5senior ,
+.zad6senior,
+.zad7senior,
+.zad8senior{
+	width: 50vw;
+	height: 15vh;
+	background-color: rgb(125, 136, 197);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	margin: 15px;
+	font-size: 20px;
+	padding: 10px;
+}
+.wrapperSenior{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleExercise {
+	font-size: 20px;
+    margin-bottom: 1%;
+}
+.checkAnswers1,
+.checkAnswers2,
+.checkAnswers3,
+.checkAnswers4 
+.checkAnswers5, 
+.checkAnswers6, 
+.checkAnswers7, 
+.checkAnswers8 {
+	height: 40px;
+	width: 150px;
+	margin-left: 15px;
+	transition: all 0.3s ease;
+}
+.checkAnswers1:hover,
+.checkAnswers2:hover,
+.checkAnswers3:hover,
+.checkAnswers4:hover
+.checkAnswers5:hover, 
+.checkAnswers6:hover, 
+.checkAnswers7:hover, 
+.checkAnswers8:hover
+
+{
+	background-color: #9faec5;
+}

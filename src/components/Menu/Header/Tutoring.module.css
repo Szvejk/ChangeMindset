@@ -11,7 +11,7 @@
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	min-height: 30px;
-	margin-bottom: 3%;
+	
 }
 .titleSmall {
 	color: rgb(78, 11, 133);
@@ -22,10 +22,11 @@
 }
 .wrapperCards {
 	width: 80%;
-	height: 20vh;
+	min-height: 20vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 .card {
 	font-family: 'Montserrat', sans-serif;
@@ -53,6 +54,7 @@
 	display: flex;
 	justify-content: center;
 	margin-bottom: 10%;
+	flex-wrap: wrap;
 	
 }
 

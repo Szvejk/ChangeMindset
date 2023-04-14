@@ -31,3 +31,10 @@ const App = () => {
 };
 
 export default App;
+
+
+// zapytać czemu grammar jest taki wysoki
+// jak usestate do poprawnej odpowiedzi wykorzystac
+// test
+// licznik home
+// sekcja nakładajaca sie home

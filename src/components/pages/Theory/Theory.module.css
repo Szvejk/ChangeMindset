@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap');
+
+
+.theoryWrapper{
+    max-width: 100vw;
+   min-height: 100vh;
+    background-color: rgb(178, 204, 207);  
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ 
+}
+.theory{
+  
+    min-height: 900px;
+    width: 1000px;
+    background-color: #fff;
+    padding: 2%;
+    font-family: Montserrat;
+   margin: 3%;
+}
+.titleTime{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom:40px;
+}
+.time {
+    margin-bottom: 4%;
+    line-height: 25px;
+}

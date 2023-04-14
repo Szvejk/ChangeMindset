@@ -1,9 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from '../Junior/junior.module.css';
+
+
+const Question=()=>{
+	const [showAnswer,setShowAnswer]=useState(false)
+
+	return <><div className={styles.zad1}>
+					<h5 className={styles.titleExercise}>
+						I ___ anything about the night of the accident.
+					</h5>
+					<p>a. don't remember</p>
+					<p style={{color: showAnswer ? 'green' : 'black'}}>b.'m not remembering</p>
+					<p>c.wasn't remembering</p>
+				</div>
+				<button className={styles.checkAnswers1} onClick={()=>setShowAnswer(true)}>Sprawdź odpowiedź</button></>
+}
+
 const junior = () => {
 	return (
 		<div className={styles.wrapperJunior}>
-			
+				<Question />
 				<div className={styles.zad1}>
 					<h5 className={styles.titleExercise}>
 						I ___ anything about the night of the accident.

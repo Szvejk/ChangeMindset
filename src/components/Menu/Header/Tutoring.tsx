@@ -9,25 +9,28 @@ const Tutoring = () => {
 			icon: <BiCopyAlt />,
 			title: 'Relaks w połączeniu z nauką',
 			text: 'Oferujemy kilka możliwości nauki: rozwiązywanie zadań, test prywatny mentoring',
-		},{
-			id:2,
-			card:2,
-			icon:	<BiFile />,
+		},
+		{
+			id: 2,
+			card: 2,
+			icon: <BiFile />,
 			title: ' Certyfikaty',
-			text: '	We are constantly improving the material for the lessons we want to pass on to others'
-		},{
-			id:3,
-			card:3,
-			icon:	<BiMessageRounded />,
-			title:"Prywatny Mentoring",
-			text:"	Zawsze możesz na nas liczyć! Gdyby pojawiły się pytania podczas rozwiązywania zadań, skontaktuj się z nami"
-		}, {
-			id:4,
-			card:4,
-			icon: 	<BiMeteor />,
-			title: "Kreatywne myślenie",
-			text:"	All of our specialists in special education have the best educational degrees "
-		}
+			text: '	We are constantly improving the material for the lessons we want to pass on to others',
+		},
+		{
+			id: 3,
+			card: 3,
+			icon: <BiMessageRounded />,
+			title: 'Prywatny Mentoring',
+			text: '	Zawsze możesz na nas liczyć! Gdyby pojawiły się pytania podczas rozwiązywania zadań, skontaktuj się z nami',
+		},
+		{
+			id: 4,
+			card: 4,
+			icon: <BiMeteor />,
+			title: 'Kreatywne myślenie',
+			text: '	All of our specialists in special education have the best educational degrees ',
+		},
 	];
 
 	return (
@@ -42,19 +45,18 @@ const Tutoring = () => {
 					<div className={styles.wrapperCards}>
 						{cards.map((el) => {
 							return (
-								<>
-									<div key={el.id}></div>
+								<div key={el.id}>
 									<div className={styles.card}>
-									<div className={styles.divIcon}>{el.icon} </div>
-									<div className={styles.titleCard}> 
-									<span className={styles.nameForCard}> {el.title}</span></div>
-									<div className={styles.text}> {el.text}</div>
+										<div className={styles.divIcon}>{el.icon} </div>
+										<div className={styles.titleCard}>
+											<span className={styles.nameForCard}> {el.title}</span>
+										</div>
+										<div className={styles.text}> {el.text}</div>
 									</div>
-								</>
+									</div>
+								
 							);
 						})}
-
-						
 					</div>
 				</div>
 			</section>

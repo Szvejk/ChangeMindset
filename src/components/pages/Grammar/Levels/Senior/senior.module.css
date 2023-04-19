@@ -24,14 +24,32 @@
 .showAnswer {
 	width: 120px;
 	height: 30px;
+	border: none;
+	border-radius: 5px;
+	font-weight: 600;
+	margin-bottom: 3%;
+	font-family: Montserrat;
+	background-color: rgb(115, 130, 199);
+}
+.correctAnswer{
+	margin-bottom: 3%;
+	font-size: 15px;
+	color: gray;
 }
 .senior {
 	width: 40%;
-	min-height: 800px;
+	min-height: 600px;
 	padding: 3%;
 	display: flex;
 	justify-content: space-around;
 	flex-direction: column;
 	background-color: #fff;
-	;
+	margin: 5%;
+	font-family: Montserrat;
+	font-size: 20px;
+}
+@media (max-width:1000px){
+	.senior{
+		width: 80%;
+	}
 }

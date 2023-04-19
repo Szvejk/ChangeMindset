@@ -35,3 +35,8 @@
 	background-color: #fff;
 	;
 }
+@media (max-width:1000px){
+	.junior{
+		width: 80%;
+	}
+}

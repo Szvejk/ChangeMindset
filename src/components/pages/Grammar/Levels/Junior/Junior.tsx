@@ -27,7 +27,7 @@ const junior = () => {
 				"odp3:wasn't remembering",
 			],
 			button: 'Sprawdź',
-			correctAnswer: " odp1: wasn't remembering "
+			correctAnswer: " odp1: wasn't remembering ",
 		},
 		{
 			id: 2,
@@ -39,7 +39,7 @@ const junior = () => {
 				'odp3:have recently renewed',
 			],
 			button: 'Sprawdź',
-			correctAnswer: " odp1:recently renewed  "
+			correctAnswer: ' odp1:recently renewed  ',
 		},
 		{
 			id: 3,
@@ -47,8 +47,8 @@ const junior = () => {
 			titleExercise: 'We took off our clothes and ___ into the river.',
 			answers: ['odp1: were jumping', 'odp2:had jumped', 'odp3:jumped'],
 			button: 'Sprawdź',
-			
-			correctAnswer: " odp1:were jumping  "
+
+			correctAnswer: ' odp1:were jumping  ',
 		},
 		{
 			id: 4,
@@ -60,8 +60,8 @@ const junior = () => {
 				'odp3:will disappear',
 			],
 			button: 'Sprawdź',
-			
-			correctAnswer: " odp1:will disappear "
+
+			correctAnswer: ' odp1:will disappear ',
 		},
 		{
 			id: 4,
@@ -73,8 +73,8 @@ const junior = () => {
 				'odp3:men/the women',
 			],
 			button: 'Sprawdź',
-			
-			correctAnswer: " odp1:men/the women "
+
+			correctAnswer: ' odp1:men/the women ',
 		},
 		{
 			id: 5,
@@ -86,36 +86,40 @@ const junior = () => {
 				' odp3: the end/the world',
 			],
 			button: 'Sprawdź',
-			
-			correctAnswer: " odp1:the end/world "
+
+			correctAnswer: ' odp1:the end/world ',
 		},
 	];
-const Question=() =>{
-	const [showAnswer, setShowAnswer] =useState(false)
+	const Question = () => {
+		const [showAnswer, setShowAnswer] = useState(false);
 
-	return (
-		<div className={styles.wrapperJunior}>
-			<div className={styles.junior}>S
-				{ask.map((el) => {
-					return (
-						<>
-							<div key={el.id}></div>
-							<span className={styles.titleExercise}>{el.titleExercise}</span>
+		return (
+			<div className={styles.wrapperJunior}>
+				<div className={styles.junior}>
+					{ask.map((el) => {
+						return (
+							<div key={el.id}>
+								<span className={styles.titleExercise}>{el.titleExercise}</span>
 
-							<div className={styles.answers}>
-								{el.answers.map((el) => {
-									return <div className={styles.singleEl}> {el}</div>;
-								})}
+								<div className={styles.answers}>
+									{el.answers.map((el) => {
+										return <div className={styles.singleEl}> {el}</div>;
+									})}
+								</div>
+
+								{/* <button
+									className={styles.showAnswer}
+									onClick={() => setShowAnswer(true)}
+								>
+									{el.button}
+								</button>
+								{showAnswer ? <div> {el.correctAnswer}</div> : null} */}
 							</div>
-
-					{/* <button className={styles.showAnswer} onClick={() => setShowAnswer(true)} {showAnswer? <div> {el.correctAnswer}</div>: null}> {el.button}</button> */}
-						
-						</>
-					);
-				})}
+						);
+					})}
+				</div>
 			</div>
-		</div>
-	);
+		);
+	};
 };
-}
 export default junior;

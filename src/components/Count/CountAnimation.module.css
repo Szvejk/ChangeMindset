@@ -1,0 +1,14 @@
+
+
+.counter{
+    font-size: 50px;
+}
+
+
+
+@media(max-width: 1000px) {
+ .counter{
+    font-size: 30px;
+ }
+}
+  

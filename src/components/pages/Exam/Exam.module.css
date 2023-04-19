@@ -1,0 +1,35 @@
+.wrapperExam {
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #6b8696;
+}
+
+.titleExercise {
+	font-size: 20px;
+	margin-bottom: 1%;
+	font-weight: 800;
+}
+.answers {
+	display: flex;
+	gap: 20px;
+	color: rgb(3, 141, 3);
+}
+
+.showAnswer {
+	width: 120px;
+	height: 30px;
+}
+.Exam{
+	width: 40%;
+	min-height: 800px;
+	padding: 3%;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	background-color: #fff;
+	;
+}

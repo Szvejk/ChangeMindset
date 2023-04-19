@@ -53,3 +53,9 @@
 .dotStyles:hover {
 	color: rgb(26, 57, 83);
 }
+
+@media (max-width: 1000px) {
+.sliderStyles{
+	width: 350px;
+}
+}

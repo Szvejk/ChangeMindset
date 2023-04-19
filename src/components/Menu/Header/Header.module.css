@@ -1,10 +1,4 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap');
-
-
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap');
 
 .photoImg {
 	width: 100%;
@@ -26,7 +20,7 @@
 	align-content: center;
 	font-family: 'Montserrat', sans-serif;
 }
-.titleHeader{
+.titleHeader {
 	font-size: 30px;
 	line-height: 50px;
 	text-align: center;
@@ -45,8 +39,30 @@
 
 	padding: 2%;
 }
-.descript{
+.descript {
 	text-align: center;
 	color: rgb(99, 99, 99);
 	font-family: 'Montserrat', sans-serif;
+}
+@media (max-width: 1000px) {
+	.descriptionHeader {
+		width: 400px;
+	}
+	.containerStyles {
+		min-width: 100vw;
+	}
+	.titleHeader {
+		font-size: 20px;
+		line-height: 35px;
+		width: 100%;
+		margin-bottom: 10%;
+		font-family: 'Montserrat', sans-serif;
+	}
+	.titleSociety {
+		font-size: 12px;
+		margin-top: 3%;
+	}
+	.descript {
+		font-size: 15px;
+	}
 }

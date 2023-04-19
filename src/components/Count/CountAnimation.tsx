@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import styles from './CountAnimation.module.css'
 
 interface CounterProps {
   duration: number;
@@ -41,7 +41,7 @@ const DELAY=500;
         fontSize: "40px",
       }}>
     
-      {count}
+     <span className={styles.counter}>{count}</span> 
     </div>
   );
 };

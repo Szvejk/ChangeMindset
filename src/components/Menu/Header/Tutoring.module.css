@@ -2,8 +2,6 @@
 
 
 
-
-
 .titleTutoring {
 	font-size: 15px;
 	display: flex;
@@ -11,8 +9,8 @@
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	min-height: 30px;
-	
 }
+
 .titleSmall {
 	color: rgb(78, 11, 133);
 	font-size: 20px;
@@ -20,6 +18,15 @@
 	font-family: 'Montserrat', sans-serif;
 	line-height: 40px;
 }
+
+.flex {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10%;
+	flex-wrap: wrap;
+}
+
 .wrapperCards {
 	width: 80%;
 	min-height: 20vh;
@@ -31,54 +38,69 @@
 .card {
 	font-family: 'Montserrat', sans-serif;
 	width: 15%;
-	background-color: rgb(248, 243, 243);
+	background-color: rgb(149, 223, 114);
 	margin: 3%;
 	padding: 2%;
 	min-height: 350px;
-	border-radius:5%;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	border-radius: 5%;
+	box-shadow: rgba(120, 120, 187, 0.25) 0px 13px 27px -5px,
+		rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 	transition: all 0.3s ease;
 }
-.card:hover{
+.card:hover {
 	background-color: rgb(178, 194, 212);
+}
+
+.divIcon {
+	font-size: 40px;
+	text-align: center;
+	color: rgb(10, 40, 53);
+}
+
+.nameForCard {
+	margin-bottom: 20%;
+	line-height: 30px;
 }
 
 .text {
 	line-height: 25px;
 }
-.titleCardSection {
-	margin-bottom: 4%;
-}
-.flex {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	margin-bottom: 10%;
-	flex-wrap: wrap;
-	
+
+
+.titleCard {
+	font-size: 20px;
+	margin-bottom: 2%;
+	font-weight: 600;
+	text-align: center;
 }
 
-.divforFirstCard, .divforSecondCard, .divforThirdCard, .divforFourthCard {
-	background-color: yellow;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	width: 40px;
-	height: 40px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 25px;
-	margin-bottom: 10%;
-	border-radius: 10px;
+@media (max-width: 1000px) {
+	.wrapperCards {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.card {
+		display: flex;
+		flex-direction: column;
+		width: 55vw;
+		justify-content: center;
+		align-content: center;
+	}
+	.titleSmall {
+		margin-top: 10%;
+	}
+	.titleCardSection {
+		margin-bottom: 5%;
+	}
+	.nameForCard {
+		margin-bottom: 20%;
+	}
+	.text {
+		line-height: 25px;
+		text-align: center;
+	}
+	.divIcon{
+		font-size:40px;
+	}
 }
- .divforSecondCard{
-	background-color: rgb(130, 130, 177);
- }
- .divforThirdCard{
-	background-color: #9d50ca;
- }
- .divforFourthCard{
-	background-color: #6fa781;
- }
- .nameForCard{
-	margin-bottom: 6%;
- }

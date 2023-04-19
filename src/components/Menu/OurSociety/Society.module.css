@@ -2,7 +2,6 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-    
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap');
 
@@ -12,9 +11,9 @@
 	justify-content: center;
 	align-items: center;
 	gap: 20px;
-    margin-bottom: 5%;
-    margin-top: 5%;
-    font-family: 'Montserrat', sans-serif;
+	margin-bottom: 5%;
+	margin-top: 5%;
+	font-family: 'Montserrat', sans-serif;
 }
 .container {
 	width: 28vmin;
@@ -30,18 +29,16 @@
 	border-radius: 0.5em;
 	background-color: rgb(153, 166, 185);
 	border-bottom: 10px solid #18f98f;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-
-.iconCounter{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    font-size: 40px;
+.iconCounter {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	font-size: 40px;
 }
-
 
 span.num {
 	color: rgb(17, 5, 5);
@@ -54,53 +51,41 @@ span.text {
 	color: rgb(15, 15, 90);
 	font-size: 20px;
 	text-align: center;
-padding: 10px;
+	padding: 10px;
 	font-weight: 400;
 	line-height: 20px;
-
-   
 }
 
-
-.numbers{
+.numbers {
 	width: 100%;
-line-height: 30px;
+	line-height: 30px;
 	display: flex;
 	justify-content: center;
-align-content: center;
+	align-content: center;
 }
-
-
 
 @media screen and (max-width: 1024px) {
 	.wrapper {
-		width: 85vw;
+		display: flex;
+		flex-direction: column;
 	}
+
+	span.text
+ {
+		font-size: 18px;
+	}
+
+
+
+	.iconCounter {
+		font-size: 30px;
+		margin-top: 2%;
+	}
+
 	.container {
-		height: 26vmin;
-		width: 26vmin;
-		font-size: 12px;
-	}
-}
-@media screen and (max-width: 768px) {
-	.wrapper {
-		width: 90vw;
-		flex-wrap: wrap;
-		gap: 30px;
-	}
-	.container {
-		width: calc(50% - 40px);
-		height: 30vmin;
-		font-size: 14px;
-	}
-}
-@media screen and (max-width: 480px) {
-	.wrapper {
-		gap: 15px;
-	}
-	.container {
-		width: 100%;
-		height: 25vmin;
-		font-size: 8px;
+		width: 60vmin;
+		height: 35vmin;
+
+		padding: 1em 0;
 	}
 }

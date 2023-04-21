@@ -7,7 +7,7 @@ import Tutoring from '../../Menu/Header/Tutoring'
 const Home = () => {
 	return (
 		<> 
-			<Menu />
+		
 			<Header />
 			<Society />
 			<Tutoring />

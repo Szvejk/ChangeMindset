@@ -9,10 +9,12 @@ import Footer from './components/pages/Footer/Footer';
 import Junior from './components/pages/Grammar/Levels/Junior/Junior';
 import Middle from './components/pages/Grammar/Levels/Middle/Middle';
 import Senior from './components/pages/Grammar/Levels/Senior/Senior';
+import Menu from './components/Menu/Nav/Menu'
 const App = () => {
 	return (
 		<>
 			<Router>
+					<Menu />
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/grammar' element={<Grammar />} />

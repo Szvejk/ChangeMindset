@@ -38,7 +38,7 @@ const Theory = () => {
 
 	return (
 		<>
-			<Menu />
+		
 			<div className={styles.theoryWrapper}>
 				<div className={styles.theory}>
 					{theoryTimes.map((el) => {

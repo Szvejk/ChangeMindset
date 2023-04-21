@@ -14,7 +14,7 @@
 .theory{
   
     min-height: 900px;
-    width: 1000px;
+    width: 1200px;
     background-color: #fff;
     padding: 2%;
     font-family: Montserrat;
@@ -23,9 +23,25 @@
 .titleTime{
     font-size: 25px;
     font-weight: 600;
-    margin-bottom:40px;
+ 
+  text-align: center;
 }
 .time {
     margin-bottom: 4%;
     line-height: 25px;
+}
+@media (max-width: 1000px) {
+    .theoryWrapper{
+        min-height: 100vh;
+    }
+    .theory{
+        width: 80%;
+        margin: 10%;
+    
+    }
+    .titleTime{
+        margin-bottom: 8%;
+        padding: 5%;
+        text-align: center;
+    }
 }

@@ -21,6 +21,7 @@ type SingleAsk = {
 	titleExercise: string;
 	answers: string[];
 	correctAnswer: string;
+	value: number;
 };
 
 const ask: SingleAsk[] = [
@@ -34,6 +35,7 @@ const ask: SingleAsk[] = [
 			"odp3:wasn't remembering",
 		],
 		correctAnswer: " odp1: don't remember ",
+		value: 1,
 	},
 	{
 		id: 2,
@@ -45,6 +47,7 @@ const ask: SingleAsk[] = [
 			'odp3: have recently renewed',
 		],
 		correctAnswer: ' odp1: have recently renewed ',
+		value: 2,
 	},
 	{
 		id: 3,
@@ -53,6 +56,7 @@ const ask: SingleAsk[] = [
 		answers: ['odp1: were jumping', 'odp2:had jumped', 'odp3:jumped'],
 
 		correctAnswer: ' odp1: jumped  ',
+		value: 3,
 	},
 	{
 		id: 8,
@@ -65,6 +69,7 @@ const ask: SingleAsk[] = [
 		],
 
 		correctAnswer: ' odp1: will disappear ',
+		value: 4,
 	},
 	{
 		id: 4,
@@ -73,6 +78,7 @@ const ask: SingleAsk[] = [
 		answers: ['odp1:  women/the men', ' odp2: women/men', 'odp3:men/the women'],
 
 		correctAnswer: ' odp1:men/the women ',
+		value: 5,
 	},
 	{
 		id: 5,
@@ -85,36 +91,47 @@ const ask: SingleAsk[] = [
 		],
 
 		correctAnswer: ' odp3:the end/the world ',
+		value: 6,
 	},
 ];
+
+
 
 const Question = ({ el }: { el: SingleAsk }) => {
 	const [showAnswer, setShowAnswer] = useState(false);
 
+	function Demo() {
+	// const [value, setValue] = useState(value);
+
+
+}
+
 	return (
-		<div key={el.id}>
-			<span className={styles.titleExercise}>{el.titleExercise}</span>
+	
+			<div key={el.id}>
+				
+				<span className={styles.titleExercise}>{el.titleExercise}</span>
 
-			<div className={styles.answers}>
-				{el.answers.map((el) => {
-					return (
-						<div key={el} className={styles.singleEl}>
-							<input type='radio' className={styles.check} /> <br />
-							{el}
-						</div>
-					);
-				})}
-			</div>
+				<div className={styles.answers}>
+					{el.answers.map((el) => {
+						return (
+							<div key={el} className={styles.singleEl}>
+								{el}
+							</div>
+						);
+					})}
+				</div>
 
-			<button
-				className={styles.showAnswer}
-				onClick={() => setShowAnswer((prev) => !prev)}
-			>
-				Sprawdź
-			</button>
-			{showAnswer ? (
-				<div className={styles.correctAnswer}> {el.correctAnswer}</div>
-			) : null}
+				<button
+					className={styles.showAnswer}
+					onClick={() => setShowAnswer((prev) => !prev)}
+				>
+					Sprawdź
+				</button>
+				{showAnswer ? (
+					<div className={styles.correctAnswer}> {el.correctAnswer}</div>
+				) : null}
+		
 		</div>
 	);
 };

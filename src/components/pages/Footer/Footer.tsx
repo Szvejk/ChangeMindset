@@ -4,6 +4,7 @@ import Menu from '../../Menu/Nav/Menu';
 import { useFormik } from 'formik';
 import { basicSchema } from './schemas/schema';
 import styles from './Footer.module.css';
+import waves from '../../../img/waves.svg'
 type FormValues = {
 	name: string;
 	email: string;
@@ -41,6 +42,7 @@ const Footer = () => {
 	return (
 		<>
 			<div className={styles.wrapFlex}>
+				<img src={waves} className={styles.wave} alt="" />
 				<div className={styles.wrapperForm}>
 					<form onSubmit={handleSubmit} autoComplete='off'>
 						<div className={styles.emailWrap}>
@@ -54,7 +56,9 @@ const Footer = () => {
 								type='email'
 								placeholder='Enter your email'
 								onBlur={handleBlur}
-								className={errors.email && touched.email ? 'inputError' : ''}
+								className={
+									errors.email && touched.email ? styles.inputError : ''
+								}
 							/>
 							{errors.email && touched.email && (
 								<p className={styles.error}>{errors.email}</p>
@@ -67,10 +71,10 @@ const Footer = () => {
 							<input
 								value={values.name}
 								onChange={handleChange}
-								id={styles.name}
+								id='name'
 								type='name'
 								placeholder='Enter your name'
-								className={errors.name && touched.name ? 'inputError' : ''}
+								className={errors.name && touched.name ? styles.inputError : ''}
 							/>{' '}
 							{errors.name && touched.name && (
 								<p className={styles.error}>{errors.name}</p>
@@ -83,11 +87,11 @@ const Footer = () => {
 							<input
 								value={values.message}
 								onChange={handleChange}
-								id={styles.cssMessage}
+								id='message'
 								type='message'
 								placeholder='Write your message'
 								className={
-									errors.message && touched.message ? 'inputError' : ''
+									errors.message && touched.message ? styles.inputError : ''
 								}
 							/>{' '}
 							{errors.message && touched.message && (

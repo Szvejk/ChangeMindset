@@ -25,16 +25,9 @@
 	flex-direction: column;
 	margin: 3% 0;
 }
-.singleEl{
-	display: flex;
-	width: 100%;
-	
-	align-content: center;
-}
-.check{
-	margin-right: 10px;
-	margin-top: 25px;
-}
+
+
+
 .showAnswer {
 	width: 120px;
 	height: 30px;
@@ -47,7 +40,7 @@
 	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 .correctAnswer{
-	margin: 2% 0;
+	margin-bottom: 3%;
 	font-size: 15px;
 	color: gray;
 }

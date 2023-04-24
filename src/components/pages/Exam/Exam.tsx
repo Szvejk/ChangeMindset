@@ -15,7 +15,11 @@ const ask: SingleAsk[] = [
 		id: 1,
 		zad: 1,
 		titleExercise: ' Why ___ so fast? Please, slow down!',
-		answers: ['odp1:  are you driving', 'odp2: will you drive', 'odp3: do you drive'],
+		answers: [
+			'odp1:  are you driving',
+			'odp2: will you drive',
+			'odp3: do you drive',
+		],
 
 		correctAnswer: ' odp1: are you driving ',
 	},
@@ -30,8 +34,13 @@ const ask: SingleAsk[] = [
 	{
 		id: 3,
 		zad: 3,
-		titleExercise: 'A: You look fitter! B: Yes, I ___ at the gym for the last few months.',
-		answers: ['odp1: am working out', 'odp2: have been working out', 'odp3: work out'],
+		titleExercise:
+			'A: You look fitter! B: Yes, I ___ at the gym for the last few months.',
+		answers: [
+			'odp1: am working out',
+			'odp2: have been working out',
+			'odp3: work out',
+		],
 
 		correctAnswer: ' odp1: have been working out  ',
 	},
@@ -39,7 +48,11 @@ const ask: SingleAsk[] = [
 		id: 6,
 		zad: 6,
 		titleExercise: 'I am pretty sure printed books ____ one day.',
-		answers: ['odp1: are disappearing', 'odp2: are going to disappear', 'odp3: will disappear'],
+		answers: [
+			'odp1: are disappearing',
+			'odp2: are going to disappear',
+			'odp3: will disappear',
+		],
 
 		correctAnswer: ' odp1: will disappear',
 	},
@@ -73,9 +86,15 @@ const Question = ({ el }: { el: SingleAsk }) => {
 
 			<div className={styles.answers}>
 				{el.answers.map((el) => {
-					return <div className={styles.singleEl}> {el}</div>;
+					return (
+						<div className={styles.singleEl}>
+							{' '}
+						 {el}
+						</div>
+					);
 				})}
 			</div>
+
 			<button
 				className={styles.showAnswer}
 				onClick={() => setShowAnswer((prev) => !prev)}
@@ -84,8 +103,9 @@ const Question = ({ el }: { el: SingleAsk }) => {
 				Sprawdź
 			</button>
 
-			{showAnswer ? <div className={styles.correctAnswer}> {el.correctAnswer}</div> : null}
-
+			{showAnswer ? (
+				<div className={styles.correctAnswer}> {el.correctAnswer}</div>
+			) : null}
 		</div>
 	);
 };

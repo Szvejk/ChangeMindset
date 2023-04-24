@@ -13,6 +13,10 @@
 	margin-bottom: 1%;
 	font-weight: 800;
 }
+
+.check{
+	margin-right: 15px;
+}
 .answers {
 	display: flex;
 	gap: 20px;
@@ -20,6 +24,7 @@
 	flex-direction: column;
 	margin: 3% 0;
 }
+
 
 .showAnswer {
 	width: 120px;

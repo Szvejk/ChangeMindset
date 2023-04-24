@@ -101,11 +101,12 @@
 }
 @media (max-width:1000px){
 	.wrapperLevels{
-		height: 80%;
+		height: 60%;
 		display: flex;
 		flex-direction: column;
 	}
 	.titleOfChoose{
 		text-align: center;
+		font-size: 30px;
 	}
 }

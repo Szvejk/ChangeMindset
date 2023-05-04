@@ -59,9 +59,9 @@ const Contact = () => {
 								value={values.email}
 								onChange={handleChange}
 								id={styles.email}
-								type='email'
 								placeholder='Enter your email'
 								onBlur={handleBlur}
+								name='email'
 								className={
 									errors.email && touched.email ? styles.inputError : ''
 								}
@@ -79,7 +79,7 @@ const Contact = () => {
 								value={values.name}
 								onChange={handleChange}
 								id={styles.name}
-								type='name'
+								name='name'
 								placeholder='Enter your name'
 								className={errors.name && touched.name ? styles.inputError : ''}
 							/>{' '}
@@ -95,7 +95,7 @@ const Contact = () => {
 								value={values.message}
 								onChange={handleChange}
 								id={styles.message}
-								type='message'
+								name='message'
 								placeholder='Write your message'
 								className={
 									errors.message && touched.message ? styles.inputError : ''

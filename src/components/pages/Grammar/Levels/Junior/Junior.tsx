@@ -86,8 +86,8 @@ const ask: SingleAsk[] = [
 		titleExercise: "Don't worry! It's not ___ of ___.",
 		answers: [
 			' odp1:  the end/world',
-			' <input type="radio"/> odp2: the world/the end',
-			' <input type="radio"/> odp3: the end/the world',
+			' odp2: the world/the end',
+			' odp3: the end/the world',
 		],
 
 		correctAnswer: ' odp3:the end/the world ',
@@ -95,27 +95,33 @@ const ask: SingleAsk[] = [
 	},
 ];
 
-
-
 const Question = ({ el }: { el: SingleAsk }) => {
 	const [showAnswer, setShowAnswer] = useState(false);
 
-	function Demo() {
-	// const [value, setValue] = useState(value);
+	const [value, setValue] = useState(' ');
 
-
-}
+	function onChangeValue(event: any) {
+		setValue(event.target.value);
+		console.log(event.target.value);
+	}
 
 	return (
-	
+		<div onChange={onChangeValue}>
 			<div key={el.id}>
-				
 				<span className={styles.titleExercise}>{el.titleExercise}</span>
 
 				<div className={styles.answers}>
 					{el.answers.map((el) => {
 						return (
 							<div key={el} className={styles.singleEl}>
+								<div className={styles.check}>
+									<input
+										type='radio'
+										name='input'
+										value={el}
+										onClick={onChangeValue}
+									/>{' '}
+								</div>{' '}
 								{el}
 							</div>
 						);
@@ -131,7 +137,7 @@ const Question = ({ el }: { el: SingleAsk }) => {
 				{showAnswer ? (
 					<div className={styles.correctAnswer}> {el.correctAnswer}</div>
 				) : null}
-		
+			</div>
 		</div>
 	);
 };

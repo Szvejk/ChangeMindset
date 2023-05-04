@@ -7,22 +7,37 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #6b8696;
+	background-image: linear-gradient(to right, #8360c3, #2ebf91);
 }
 
 .titleExercise {
 	font-size: 20px;
-	margin-bottom: 1%;
+	margin-bottom: 6%;
+	
 	font-weight: 800;
 	font-family: Montserrat;
 }
 .answers {
 	display: flex;
 	gap: 20px;
-	color: rgb(3, 141, 3);
+	color: rgb(37, 20, 83);
 	flex-direction: column;
-	margin: 3% 0;
+	margin: 4%;
 }
+
+.singleEl {
+	height: 50%;
+	display: flex;
+	flex-direction: row;
+	margin-left: 2%;
+	align-items: center;
+	justify-content: flex-start;
+	min-width: 80%;
+}
+
+
+
+
 .check{
 	margin-right:  15px;;
 }
@@ -31,11 +46,11 @@
 	width: 120px;
 	height: 30px;
 	font-family: Montserrat;
-	background-color: rgb(115, 130, 199);
+	background-image: linear-gradient(to right, #00b4db, #0083b0);
 	border: none;
 	border-radius: 5px;
 	font-weight: 600;
-	margin-bottom: 3%;
+	margin-bottom: 5%;
 	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 .correctAnswer {
@@ -43,7 +58,7 @@
 	font-size: 15px;
 	color: gray;
 }
-.Exam {
+.exam {
 	width: 40%;
 	min-height: 600px;
 	padding: 3%;
@@ -55,9 +70,62 @@
 	font-family: Montserrat;
 	font-size: 20px;
 }
-@media (max-width: 1000px) {
-	.Exam{
-		width: 80%;
+
+@media (max-width: 600px) {
+	.singleEl {
+		height: 50%;
+		display: flex;
+		flex-direction: row;
+		margin-left: 2%;
+		align-items: center;
+		justify-content: flex-start;
+		min-width: 80%;
+	}
+	.answers {
+		min-width: 100%;
 		font-size: 15px;
+	}
+
+	.titleExercise {
+		text-align: center;
+		margin: auto;
+		font-size: 18px;
+	}
+	.showAnswer {
+		margin-bottom: 4%;
+	}
+	.exam{
+		min-width: 80%;
+	}
+}
+
+@media (max-width: 1200px) {
+	.singleEl {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		flex-wrap: nowrap;
+	}
+
+	.answers {
+		display: flex;
+		align-items: center;
+		justify-items: center;
+		width: 80%;
+		
+	}
+
+	.titleExercise {
+		text-align: center;
+		margin: auto;
+	}
+	.check{
+		width: 60px;
+	}
+	.showAnswer {
+		margin: 5%;
+	}
+	.exam {
+		min-width: 80%;
 	}
 }

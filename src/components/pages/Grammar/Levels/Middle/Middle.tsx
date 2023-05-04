@@ -68,29 +68,47 @@ const ask = [
 
 const Question = ({ el }: { el: SingleAsk }) => {
 	const [showAnswer, setShowAnswer] = useState(false);
+
+	const [value, setValue] = useState(' ');
+
+	function onChangeValue(event: any) {
+		setValue(event.target.value);
+		console.log(event.target.value);
+	}
+
 	return (
-		<div key={el.id}>
-			<span className={styles.titleExercise}>{el.titleExercise}</span>
+		<div onChange={onChangeValue}>
+			<div key={el.id}>
+				<span className={styles.titleExercise}>{el.titleExercise}</span>
 
-			<div className={styles.answers}>
-				{el.answers.map((el) => {
-					return (
-						<div className={styles.singleEl} key={el}>
-							{' '}
-							{el}
-						</div>
-					);
-				})}
+				<div className={styles.answers}>
+					{el.answers.map((el) => {
+						return (
+							<div key={el} className={styles.singleEl}>
+								<div className={styles.check}>
+									<input
+										type='radio'
+										name='input'
+										value={el}
+										onClick={onChangeValue}
+									/>
+								</div>{' '}
+								{el}{' '}
+							</div>
+						);
+					})}
+				</div>
+
+				<button
+					className={styles.showAnswer}
+					onClick={() => setShowAnswer((prev) => !prev)}
+				>
+					Sprawdź
+				</button>
+				{showAnswer ? (
+					<div className={styles.correctAnswer}> {el.correctAnswer}</div>
+				) : null}
 			</div>
-
-			<button
-				className={styles.showAnswer}
-				onClick={() => setShowAnswer((prev) => !prev)}
-			>
-				{' '}
-				Sprawdź
-			</button>
-			{showAnswer ? <div>{el.correctAnswer} </div> : null}
 		</div>
 	);
 };

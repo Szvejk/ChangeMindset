@@ -14,17 +14,17 @@
 	font-weight: 800;
 }
 
-.check{
-	margin-right: 15px;
-}
 .answers {
 	display: flex;
 	gap: 20px;
 	color: rgb(3, 141, 3);
 	flex-direction: column;
-	margin: 3% 0;
+	margin:8%;
 }
 
+.check {
+	width: 60px;
+}
 
 .showAnswer {
 	width: 120px;
@@ -32,12 +32,13 @@
 	border: none;
 	border-radius: 5px;
 	font-weight: 600;
-	margin-bottom: 3%;
+	margin-bottom: 10%;
 	font-family: Montserrat;
 	background-color: rgb(115, 130, 199);
-	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+		rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
-.correctAnswer{
+.correctAnswer {
 	margin-bottom: 3%;
 	font-size: 15px;
 	color: gray;
@@ -54,8 +55,71 @@
 	font-family: Montserrat;
 	font-size: 20px;
 }
-@media (max-width:1000px){
-	.senior{
+
+.singleEl {
+	height: 50%;
+	display: flex;
+	flex-direction: row;
+	margin-left: 2%;
+	align-items: center;
+	justify-content: flex-start;
+
+}
+
+@media (max-width: 600px) {
+	.singleEl {
+		height: 50%;
+		display: flex;
+		flex-direction: row;
+		margin-left: 2%;
+		align-items: center;
+		justify-content: flex-start;
+		min-width: 80%;
+	}
+	.answers {
+		min-width: 100%;
+		font-size: 15px;
+	}
+
+	.titleExercise {
+		text-align: center;
+		margin: auto;
+		font-size: 18px;
+	}
+	.showAnswer {
+		margin-bottom: 4%;
+	}
+	.senior {
+		min-width: 80%;
+	}
+}
+
+@media (max-width: 1200px) {
+	.singleEl {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		flex-wrap: nowrap;
+	}
+
+	.answers {
+		display: flex;
+		align-items: center;
+		justify-items: center;
 		width: 80%;
+	}
+
+	.titleExercise {
+		text-align: center;
+		margin: auto;
+	}
+	.check {
+		width: 60px;
+	}
+	.showAnswer {
+		margin: 5%;
+	}
+	.senior {
+		min-width: 80%;
 	}
 }

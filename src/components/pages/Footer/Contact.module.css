@@ -1,5 +1,4 @@
-.input-error
- {
+.input-error {
 	background-color: red;
 }
 
@@ -13,7 +12,7 @@
 	height: calc(100vh - 74px);
 }
 .wrapperForm {
-	width: 500px;
+	width: 700px;
 	height: 500px;
 	background-color: rgb(255, 255, 255);
 	padding: 10px;
@@ -36,11 +35,11 @@
 .error {
 	color: red;
 }
-.wave{
-	height: 150px;
+.wave {
+	height: 13%;
 	width: 100%;
 	position: absolute;
-	top: 7%;
+	bottom: 0%;
 }
 .submit {
 	margin: 15px;
@@ -61,32 +60,83 @@
 	font-weight: 600;
 	font-family: Montserrat;
 	border: 2px solid black;
-	
 }
-input{
-	margin-top: 10px;
-	height: 20%;
-	width: 80%;
-	padding: 10px;
-	color: grey;
-	
+.formFlex {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+#email,
+#name {
+	height: 40px;
+	width: 250px;
+	text-align: center;
+	border: 1px solid gray;
+}
+#message {
+	margin-top: 8px;
+	height: 120px;
+	width: 350px;
+	display: flex;
+	text-align: center;
+	border: 1px solid gray;
 }
 
-@media (max-width:1000px) {
-	.wrapFlex{
+@media (max-width: 1300px) {
+	.wave {
+		height: 40px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.wrapFlex {
 		height: 100vh;
 	}
-	.wrapperForm{
-		width: 80%;
+	.wrapperForm {
+		width: 70%;
+		height: 70%;
 	}
-	input{
-		height: 15%;
-		width: 100%;
+
+	.wave {
+		display: none;
 	}
-	.header{
+	.header {
 		font-size: 22px;
 	}
-	.submit{
+	.submit {
+		text-align: center;
+		width: 250px;
+	}
+}
+
+@media (max-width: 600px) {
+	.wrapFlex {
+		height: 100vh;
+	}
+	.wrapperForm {
+		width: 80%;
+		height: 70%;
+		display: flex;
+		align-content: center;
+		justify-content: center;
+	}
+
+	.header {
+		font-size: 18px;
+	}
+	.submit {
+		text-align: center;
+		width: 200px;
+	}
+	#message {
+		height: 100px;
+		width: 300px;
+	}
+	#email,
+	#name {
+		height: 40px;
+		width: 200px;
 		text-align: center;
 	}
 }

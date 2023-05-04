@@ -3,8 +3,9 @@ import Menu from '../../Menu/Nav/Menu';
 
 import { useFormik } from 'formik';
 import { basicSchema } from './schemas/schema';
-import styles from './Footer.module.css';
-import waves from '../../../img/waves.svg'
+import styles from './Contact.module.css';
+import waves from '../../../img/wavesNegative (1).svg';
+
 type FormValues = {
 	name: string;
 	email: string;
@@ -18,7 +19,7 @@ const onSubmit = (values: string, actions: string) => {
 	// actions.resetForm()
 };
 
-const Footer = () => {
+const Contact = () => {
 	const {
 		values,
 		errors,
@@ -42,17 +43,22 @@ const Footer = () => {
 	return (
 		<>
 			<div className={styles.wrapFlex}>
-				<img src={waves} className={styles.wave} alt="" />
+				<img src={waves} className={styles.wave} alt='' />
 				<div className={styles.wrapperForm}>
-					<form onSubmit={handleSubmit} autoComplete='off'>
+					<form
+						onSubmit={handleSubmit}
+						autoComplete='off'
+						className={styles.formFlex}
+					>
 						<div className={styles.emailWrap}>
 							<label htmlFor='email' className={styles.header}>
 								Email
 							</label>
+
 							<input
 								value={values.email}
 								onChange={handleChange}
-								id='email'
+								id={styles.email}
 								type='email'
 								placeholder='Enter your email'
 								onBlur={handleBlur}
@@ -63,6 +69,7 @@ const Footer = () => {
 							{errors.email && touched.email && (
 								<p className={styles.error}>{errors.email}</p>
 							)}
+							{!errors.email && touched.email && <p>Wszystko ok</p>}
 						</div>
 						<div className={styles.nameWrap}>
 							<label htmlFor='name' className={styles.header}>
@@ -71,7 +78,7 @@ const Footer = () => {
 							<input
 								value={values.name}
 								onChange={handleChange}
-								id='name'
+								id={styles.name}
 								type='name'
 								placeholder='Enter your name'
 								className={errors.name && touched.name ? styles.inputError : ''}
@@ -87,7 +94,7 @@ const Footer = () => {
 							<input
 								value={values.message}
 								onChange={handleChange}
-								id='message'
+								id={styles.message}
 								type='message'
 								placeholder='Write your message'
 								className={
@@ -112,4 +119,4 @@ const Footer = () => {
 	);
 };
 
-export default Footer;
+export default Contact;

@@ -5,16 +5,16 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/pages/Home/Home';
 import Theory from './components/pages/Theory/Theory';
 import Exam from './components/pages/Exam/Exam';
-import Footer from './components/pages/Footer/Footer';
+import Footer from './components/pages/Footer/Contact';
 import Junior from './components/pages/Grammar/Levels/Junior/Junior';
 import Middle from './components/pages/Grammar/Levels/Middle/Middle';
 import Senior from './components/pages/Grammar/Levels/Senior/Senior';
-import Menu from './components/Menu/Nav/Menu'
+import Menu from './components/Menu/Nav/Menu';
 const App = () => {
 	return (
 		<>
 			<Router>
-					<Menu />
+				<Menu />
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/grammar' element={<Grammar />} />
@@ -33,7 +33,6 @@ const App = () => {
 };
 
 export default App;
-
 
 // zapytać czemu grammar jest taki wysoki
 // jak usestate do poprawnej odpowiedzi wykorzystac

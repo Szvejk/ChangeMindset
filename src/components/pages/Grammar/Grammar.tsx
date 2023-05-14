@@ -1,7 +1,7 @@
 import React from 'react';
 import Menu from '../../Menu/Nav/Menu';
 import styles from '../../pages/Grammar/Grammar.module.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 const Grammar = () => {
 	return (
 		<>

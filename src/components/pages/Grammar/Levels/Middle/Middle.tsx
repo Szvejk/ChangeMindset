@@ -15,7 +15,7 @@ const ask = [
 		titleExercise:
 			'	Since they started, they ___ social media to promote their services',
 		answers: ['odp1: use', 'odp2:used', 'odp3:have been using'],
-		button: 'Sprawdź',
+		value: 0,
 		correctAnswer: ' odp1:have been using ',
 	},
 	{
@@ -23,7 +23,7 @@ const ask = [
 		zad: 2,
 		titleExercise: "In 5 years, 60% of the world's population ___ the internet",
 		answers: ['odp1: will be using', 'odp2:will use', 'odp3:are going to use'],
-		button: 'Sprawdź',
+		value: 1,
 		correctAnswer: ' odp1:will be using',
 	},
 	{
@@ -31,7 +31,7 @@ const ask = [
 		zad: 6,
 		titleExercise: 'He stopped talking because nobody ___',
 		answers: ['odp1: had listened', 'odp2:was listening', 'odp3:listened'],
-		button: 'Sprawdź',
+		value: 2,
 		correctAnswer: ' odp1: was listening',
 	},
 	{
@@ -39,7 +39,7 @@ const ask = [
 		zad: 3,
 		titleExercise: 'That suitcase belongs __ me.',
 		answers: ['odp1: for', 'odp2:from', 'odp3:to'],
-		button: 'Sprawdź',
+		value: 3,
 		correctAnswer: ' odp1:from ',
 	},
 	{
@@ -47,7 +47,7 @@ const ask = [
 		zad: 4,
 		titleExercise: '	Do you think ___ are more sensitive than __?',
 		answers: ['odp1:  women/the men', ' odp2: women/men', 'odp3:men/the women'],
-		button: 'Sprawdź',
+		value: 4,
 		correctAnswer: ' odp1:women/the men ',
 	},
 	{
@@ -60,13 +60,13 @@ const ask = [
 			' odp2: will be giving',
 			' odp3: am going to give',
 		],
-		button: 'Sprawdź',
 
+		value: 5,
 		correctAnswer: " 'll give",
 	},
 ];
 
-const Question = ({ el }: { el: SingleAsk }) => {
+const Question = ({ question }: { question: SingleAsk }) => {
 	const [showAnswer, setShowAnswer] = useState(false);
 
 	const [value, setValue] = useState(' ');
@@ -77,27 +77,26 @@ const Question = ({ el }: { el: SingleAsk }) => {
 	}
 
 	return (
-		<div onChange={onChangeValue}>
-			<div key={el.id}>
-				<span className={styles.titleExercise}>{el.titleExercise}</span>
+		<div>
+		<div key={question.id}>
+			<span className={styles.titleExercise}>{question.titleExercise}</span>
 
-				<div className={styles.answers}>
-					{el.answers.map((el) => {
-						return (
-							<div key={el} className={styles.singleEl}>
-								<div className={styles.check}>
-									<input
-										type='radio'
-										name='input'
-										value={el}
-										onClick={onChangeValue}
-									/>
-								</div>{' '}
-								{el}{' '}
-							</div>
-						);
-					})}
-				</div>
+			<div className={styles.answers}>
+				{question.answers.map((el) => {
+					return (
+						<div key={el} className={styles.singleEl}>
+							<div className={styles.check}>
+								<input
+									type='radio'
+									name={`answer${question.id}`}
+									value={el}
+									onChange={onChangeValue}
+								/>
+							</div>{' '}
+							{el}{' '}
+						</div>
+					);
+				})}
 
 				<button
 					className={styles.showAnswer}
@@ -106,10 +105,10 @@ const Question = ({ el }: { el: SingleAsk }) => {
 					Sprawdź
 				</button>
 				{showAnswer ? (
-					<div className={styles.correctAnswer}> {el.correctAnswer}</div>
+					<div className={styles.correctAnswer}> {question.correctAnswer}</div>
 				) : null}
 			</div>
-		</div>
+		</div> </div>
 	);
 };
 const middle = () => {
@@ -117,7 +116,7 @@ const middle = () => {
 		<div className={styles.wrapperMiddle}>
 			<div className={styles.middle}>
 				{ask.map((el) => {
-					return <Question el={el} key={el.id} />;
+					return <Question question={el} key={el.id} />;
 				})}
 			</div>
 		</div>

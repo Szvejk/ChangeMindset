@@ -15,8 +15,7 @@ type FormValues = {
 const onSubmit = (values: string, actions: string) => {
 	console.log(values);
 	console.log(actions);
-	// await new Promise((resolve) => setTimeout(resolve, 1000));
-	// actions.resetForm()
+
 };
 
 const Contact = () => {
@@ -100,10 +99,10 @@ const Contact = () => {
 								className={
 									errors.message && touched.message ? styles.inputError : ''
 								}
-							/>{' '}
+							/>
 							{errors.message && touched.message && (
 								<p className={styles.error}>{errors.message}</p>
-							)}{' '}
+							)}
 						</div>
 						<button
 							disabled={isSubmitting}

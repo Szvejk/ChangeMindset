@@ -13,8 +13,8 @@ const boxes = [
 	{
 		id: 2,
 		icon: <HiHeart />,
-		endCount: 220,
-		text: 'Wkładamy w naszą pracę całe serce',
+		endCount: 100,
+		text: 'Wkładamy w naszą pracę całe serce, 100%',
 	},
 	{
 		id: 3,

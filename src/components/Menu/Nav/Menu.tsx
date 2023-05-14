@@ -15,7 +15,7 @@ const menu = () => {
 	return (
 		<div className={styles.navbar}>
 			<div className={styles.logoWrapper}>
-				<img className={styles.logo} src={Logo} alt='Logo' />Ss
+				<img className={styles.logo} src={Logo} alt='Logo' />
 				<h1 className={styles.title}>Change Mindset</h1>
 			</div>
 			<nav className={styles.nav}>
